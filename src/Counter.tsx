@@ -13,7 +13,7 @@ export const Counter:React.FC = () => {
     <div>
         <div>{likes}</div>
         <button onClick={handleCount}>LIKES</button>
-        <button onClick={() => setLikes((l) => l  - 1)}>disLIKES</button>
+        <button onClick={() => setLikes((l) => l > 0 ? l  - 1: 0)}>disLIKES</button>
         <button onClick={() => setLikes(0)}>reser</button>
     </div>
   )
